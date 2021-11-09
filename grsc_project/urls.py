@@ -19,6 +19,9 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='base.html'), name='base'),
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('home.html', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('donate.html', TemplateView.as_view(template_name='donate.html'), name='donate'),
+    path('students.html', TemplateView.as_view(template_name='students.html'), name='students'),
     path('', include('grsc_app.urls')),
 ]
